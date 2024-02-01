@@ -1,132 +1,237 @@
-:root{
-    --background-color: #181818;
-    --font-color: #F6F6F6;
+:root {
+  --background-color: #181818;
+  --font-color: #f6f6f6;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    background:var(--background-color);
-    color: var(--font-color);
-    height: 100%;
-    overflow: hidden;
+body {
+  background: var(--background-color);
+  color: var(--font-color);
+  height: 100%;
+  overflow: hidden;
 }
 
-.left{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    padding-bottom: 5rem;
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 5rem;
 }
 
-.left > img{
-    width: 500px;
-    height: auto;
+.left > img {
+  width: 500px;
+  height: auto;
 }
 
 .left > .username > p,
-.left > .password > p{
-    font-size: 1.2rem;
-    margin-bottom: 0.7rem;
-    font-weight: bold;
-    /* 1rem -> 16px */
+.left > .password > p {
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: bold;
+  /* 1rem -> 16px */
 }
 
 .left > .username > .username-data,
-.left > .password > .password-data{
-    background: transparent;
-    border: 2px solid #dddddd8d;
-    border-radius: 0.75rem;
-    height: 30px;
-    width: 300px;
-    color: var(--font-color);
-    padding-left: 0.5rem;
-    font-size: 1rem;
+.left > .password > .password-data {
+  background: transparent;
+  border: 2px solid #dddddd8d;
+  border-radius: 0.75rem;
+  height: 30px;
+  width: 300px;
+  color: var(--font-color);
+  padding-left: 0.5rem;
+  font-size: 1rem;
 }
 
 .left > .password {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
-.left > button{
-    background: transparent;
-    border: 2px solid #dddddd8d;
-    color: var(--font-color);
-    width: 200px;
-    height: 30px;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
-    transition: all 0.5s;
+.left > a > button {
+  background: transparent;
+  border: 2px solid #dddddd8d;
+  color: var(--font-color);
+  width: 200px;
+  height: 30px;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  transition: all 0.5s;
 }
 
-.left > button:hover{
-    border-color: #58104f;
-    cursor:pointer;
+.left > a > button:hover {
+  border-color: #58104f;
+  cursor: pointer;
 }
 /* #58104f */
 
 .left > .optional {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .left > .optional > .forgot-password{
-    font-size: 1.15rem;
-    margin-block: 1rem;
-    text-decoration: none;
-    color: var(--font-color);
-    transition: all 0.5s;
+  background: transparent;
+  border: 0;
+  margin-bottom: 1rem;
 }
 
-.left > .optional > .forgot-password:hover{
-    cursor:pointer;
-    text-decoration: underline;
-    color: #c324ad;
+.left > .optional > .forgot-password > a{
+  font-size: 1rem;
+  margin-block: 1rem;
+  text-decoration: none;
+  color: var(--font-color);
+  transition: all 0.5s;
 }
 
-.left > .optional > button{
-    background: transparent;
-    border: 2px solid #dddddd8d;
-    color: var(--font-color);
-    width: 200px;
-    height: 30px;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
-    transition: all 0.5s;
+.left > .optional > .forgot-password > a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #c324ad;
 }
 
-.left > .optional > button:hover{
-    border-color: #58104f;
-    cursor:pointer;
+.left > .optional > a > button {
+  background: transparent;
+  border: 2px solid #dddddd8d;
+  color: var(--font-color);
+  width: 200px;
+  height: 30px;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  transition: all 0.5s;
 }
 
-.left > footer{
-    font-size: 1.5rem;
-    display: block;
-    position: absolute;
-    bottom: -20px;
-}
-.right{
-    display: flex;
-    flex: 1;
-    background-image: url('./Images/login-image.png');
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    filter: blur(0.2rem)
+.left > .optional > a > button:hover {
+  border-color: #58104f;
+  cursor: pointer;
 }
 
-.right > .blur{
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
+.left > footer {
+  font-size: 1.5rem;
+  display: block;
+  position: absolute;
+  bottom: -20px;
 }
+.right {
+  display: flex;
+  flex: 1;
+  background-image: url("./Images/login-image.png");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  filter: blur(0.2rem);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 10%;
+  left: 33%;
+  background: rgb(0, 0, 0);
+  border-radius: 1rem;
+  width: 700px;
+  height: 650px;
+  z-index: 2;
+  padding-inline: 8rem;
+}
+
+.modal > .modal-exit{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  transition: all 0.5s;
+}
+
+.modal > .modal-exit:hover{
+  background: transparent;
+  color: #fff;
+}
+
+.modal > img {
+  height: 150px;
+  width: auto;
+  margin-bottom: 0rem;
+}
+
+.modal > h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0rem;
+}
+
+.modal > p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.modal > .account-username{
+  margin-top: 2rem;
+}
+
+.modal > input {
+  background: transparent;
+  border: 2px solid #dddddd8d;
+  border-radius: 0.75rem;
+  height: 30px;
+  width: 100%; /* 1. 300px */
+  color: var(--font-color);
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.modal > button {
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  color: #000;
+  border: 2px solid #dddddd8d;
+  width: 62%; /* 1. 200px */
+  height: 30px;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  transition: all 0.5s;
+}
+
+.modal > button:hover {
+  cursor: pointer;
+  background: transparent;
+  color: var(--font-color);
+}
+.modal-overlay {
+  display: fixed;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100%;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+/* .right > .blur{
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+    } */
