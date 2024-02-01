@@ -11,7 +11,8 @@ body{
     display: flex;
     background:var(--background-color);
     color: var(--font-color);
-    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .left{
@@ -21,6 +22,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: left;
+    padding-bottom: 5rem;
 }
 
 .left > img{
@@ -60,7 +62,7 @@ body{
     height: 30px;
     border-radius: 0.75rem;
     margin-bottom: 1rem;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 .left > button:hover{
@@ -80,11 +82,13 @@ body{
     margin-block: 1rem;
     text-decoration: none;
     color: var(--font-color);
+    transition: all 0.5s;
 }
 
 .left > .optional > .forgot-password:hover{
     cursor:pointer;
     text-decoration: underline;
+    color: #c324ad;
 }
 
 .left > .optional > button{
@@ -95,7 +99,7 @@ body{
     height: 30px;
     border-radius: 0.75rem;
     margin-bottom: 1rem;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 .left > .optional > button:hover{
@@ -112,13 +116,17 @@ body{
 .right{
     display: flex;
     flex: 1;
-    background-image: url('https://i.ibb.co/7z7nnsr/login-bg.jpg');
+    background-image: url('./Images/login-image.png');
+    background-repeat: no-repeat;
+    background-size: 100vw;
     height: 100vh;
     align-items: center;
     justify-content: center;
+    filter: blur(0.2rem)
 }
 
-.right > h2{
-    font-size: 2rem;
-    font-weight: bold;
+.right > .blur{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
 }
