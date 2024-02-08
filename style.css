@@ -8,6 +8,7 @@
 }
 
 body {
+  font-family: sans-serif;
   background: var(--background-color);
   color: var(--font-color);
   height: 100%;
@@ -24,7 +25,7 @@ body {
 }
 
 .left > img {
-  width: 500px;
+  width: 350px;
   height: auto;
 }
 
@@ -53,18 +54,21 @@ body {
 }
 
 .left > a > button {
-  background: transparent;
-  border: 2px solid #dddddd8d;
-  color: var(--font-color);
-  width: 200px;
-  height: 30px;
+  font-size: 1rem;
+  background: #fff;
+  border: 0;
+  color: #000;
+  width: 300px;
+  height: 35px;
   border-radius: 0.75rem;
   margin-bottom: 1rem;
   transition: all 0.5s;
 }
 
 .left > a > button:hover {
-  border-color: #58104f;
+  border: 2px solid #dddddd8d;
+  background: #4d0c45;
+  color: #ffffff;
   cursor: pointer;
 }
 /* #58104f */
@@ -107,7 +111,7 @@ body {
 }
 
 .left > .optional > a > button:hover {
-  border-color: #58104f;
+  border-color: #4d0c45;
   cursor: pointer;
 }
 
@@ -136,7 +140,7 @@ body {
   position: fixed;
   top: 10%;
   left: 33%;
-  background: rgb(0, 0, 0);
+  background: var(--background-color);
   border-radius: 1rem;
   width: 700px;
   height: 650px;
@@ -162,7 +166,7 @@ body {
 }
 
 .modal > img {
-  height: 150px;
+  height: 200px;
   width: auto;
   margin-bottom: 0rem;
 }
@@ -209,7 +213,7 @@ body {
 
 .modal > button:hover {
   cursor: pointer;
-  background: transparent;
+  background: #4d0c45;
   color: var(--font-color);
 }
 .modal-overlay {
@@ -223,7 +227,7 @@ body {
   width: 100vw;
   height: 100%;
   border: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 

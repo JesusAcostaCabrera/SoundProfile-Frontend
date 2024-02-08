@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://accounts.spotify.com/* ">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Sound Profile</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../Images/Logo SoundProfile - Blanco.png" type="image/x-icon"/>
   </head>
   <body>
     <div class="left">
-      <img src="../Images/Slack logo.png" alt="Slack logo" />
+      <img src="../Images/Sound Profile - Blanco.png" alt="SoundProfile logo" />
       <div class="username">
         <p>Email or username</p>
         <input
@@ -29,7 +31,7 @@
         />
       </div>
 
-      <a href="#"><button type="submit" class="signin">Sign in</button></a>
+      <a href="./profile.html"><button type="submit" class="signin">Sign in</button></a>
 
       <div class="optional">
         <button type="submit" class="forgot-password">
@@ -45,7 +47,7 @@
     <!-- Recover Password Modal-->
     <div class="modal hidden" id="recover-password"> <!-- Hidden -->
       
-      <img src="../Images/Slack logo.png" alt="" />
+      <img src="../Images/Sound Profile - Blanco.png" alt="" />
       <button class="modal-exit" id="close-password">X</button>
       <h2 class="recover-password-heading">Find your SoundProfile Account</h2>
       <p class="recover-password-paragraph">
@@ -71,7 +73,7 @@
     <div class="modal hidden" id="create-account"> <!-- hidden-->
 
       <button class="modal-exit" id="close-example">X</button>
-      <img src="../Images/Slack logo.png" alt="" />
+      <img src="../Images/Sound Profile - Blanco.png" alt="" />
       <h2 class="create-account-heading-1">Create an account</h2>
       <input type="text" class="create-account-input-username" placeholder="Enter your username">
       <input type="text" class="create-account-input-email" placeholder="Enter your email">
@@ -95,6 +97,5 @@
 
         </div>
     </div>-->
-    <script src="../index.js" async defer></script>
   </body>
 </html>
