@@ -1,28 +1,80 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://accounts.spotify.com/* ">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../style.css">
-        <link rel="icon" href="../Images/Logo SoundProfile - Blanco.png" type="image/x-icon"/>
-    </head>
-    <body>
-        <section id="profile">
-            <h2>Iniciaste sesión como: <span id="displayName"></span></h2>
-            <span id="avatar"></span>
-            <ul>
-                <li>User ID <span id="id"></span></li>
-                <li>Email: <span id="email"></span></li>
-                <li>Spotify URL: <span id="uri" href="#"></span></li>
-                <li>Link: <span id="url" href="#"></span></li>
-            </ul>
-        </section>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://accounts.spotify.com/* "
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../style/profile.css" />
+    <link
+      rel="icon"
+      href="../Images/Logo SoundProfile - Blanco.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="left">
+        <a><img id="photo-header" src="" alt="" class="photo-header" /></a>
+      </div>
+      <div class="middle">
+        <div class="bar">
+          <a href="#"><h4>Home</h4></a>
+          <a href="#"><h4>Artists</h4></a>
+          <a href="#"><h4>Songs</h4></a>
+          <a href="#"><h4>Users</h4></a>
+        </div>
+      </div>
+      <div class="right">
+        <a><h3>Logout</h3></a>
+      </div>
+    </div>
 
-        <img src="" alt="Profile photo" class="profile-photo-big" id="photo">
-        <script src="../src/userAuth.js" type="module"></script>
-    </body>
+    <div class="profile">
+      <img src="" alt="" id="profile-photo" class="profile-photo" />
+      <h2 class="profile-name">Resh</h2>
+      <a id="spotify-button-link">
+        <button class="spotify-button">
+          <img
+            src="https://i.ibb.co/H28MwzW/Spotify.webp"
+            class="spotify-img"
+            alt=""
+          /><span>Spotify</span>
+        </button></a
+      >
+    </div>
+
+    <div class="actual-song">
+      <img class="song-image" id="song-image" />
+      <div class="information">
+        <h3 class="song-name" id="song-name"></h3>
+        <h3 class="song-artist" id="song-artist"></h3>
+        <div class="song-progress">
+          <div class="time">
+            <h4 class="actual-time" id="actual-time"></h4>
+            <h4>&nbsp-&nbsp</h4>
+            <h4 class="total-time" id="total-time"></h4>
+          </div>
+          <div class="total-progress">
+            <div class="actual-progress" id="actual-progress"></div>
+          </div>
+        </div>
+        <a id="song-link">
+          <button class="song-link">
+            <img
+              src="https://i.ibb.co/L83N27L/Logo-Sound-Profile-Blanco-no-bgpng.png"
+              alt=""
+            />
+            <h2>Go to Song</h2>
+          </button>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script src="../src/userAuth.js" type="module"></script>
 </html>

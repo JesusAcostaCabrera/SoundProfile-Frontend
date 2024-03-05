@@ -24,7 +24,7 @@ export default async function redirectToSpotifyAuthorize(ID, redirectURL) {
   const params = {
     response_type: "code",
     client_id: ID,
-    scope: "user-read-private user-read-email",
+    scope: "user-read-private user-read-email user-read-currently-playing",
     code_challenge_method: "S256",
     code_challenge: code_challenge_base64,
     redirect_uri: redirectURL,

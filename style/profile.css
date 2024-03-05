@@ -1,0 +1,238 @@
+:root {
+  --background-color: #181818;
+  --font-color: #f6f6f6;
+}
+
+@font-face {
+  font-family: alley;
+  src: url("../fonts/alleynpro-regular.otf");
+}
+
+@font-face{
+  font-family: poppins-normal;
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 100vh;
+  background: linear-gradient(to right, #0b0c0d 0%, #141616 100%);
+}
+
+.header {
+  padding-top: 2rem;
+  display: flex;
+  width: 100%;
+}
+
+.header > .left {
+  flex: 2;
+  padding-left: 8rem;
+}
+
+.header > .left > a > img {
+  height: 75px;
+  width: 75px;
+  border-radius: 4rem 4rem 4rem 4rem;
+  border: 2px whitesmoke solid;
+  transition: all 1s;
+}
+
+.header > .left > a:hover > img {
+  border-color: #9b188c;
+  cursor: pointer;
+}
+
+.header > .middle > .bar {
+  flex: 6;
+  display: flex;
+  justify-content: space-evenly;
+  width: 30vw;
+}
+
+.header > .middle > .bar > a {
+  text-decoration: none;
+}
+
+.header > .middle > .bar > a:hover > h4 {
+  color: #9b188c;
+  transition: all 1s;
+}
+
+.header > .middle > .bar > a > h4 {
+  font-family: alley;
+  color: whitesmoke;
+  flex: 1;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.header > .right {
+  text-align: right;
+  flex: 2;
+  padding-right: 8rem;
+  margin-top: -1rem;
+}
+
+.header > .right > a > h3 {
+  text-decoration: none;
+  font-family: alley;
+  color: whitesmoke;
+  font-size: 1.25rem;
+}
+
+.header > .right > a:hover > h3 {
+  color: #9b188c;
+  cursor: pointer;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 44.5vw;
+  width: 200px;
+}
+
+.profile > img{
+  border-radius: 70%;
+  border: 1px solid #fff;
+  width: 200px;
+  height: 200px;
+}
+
+.profile > .profile-name{
+  color: var(--font-color);
+  font-family: alley;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.profile > a > .spotify-button{
+  display: flex;
+  border: 1px solid var(--background-color);
+  border-radius: 2rem 2rem 2rem 2rem;
+  background: linear-gradient(to right,#075024 50%, #075727 75%);
+  align-items: flex-end;
+  height: 40px;
+  width: 200px;
+}
+
+.profile > a > .spotify-button:hover{
+  cursor: pointer;
+  background: linear-gradient(to right, #0b7d39 50%, #0d9543 75% );
+}
+
+.profile > a > .spotify-button > span{
+  position: relative;
+  left: 3vw;
+  bottom: 0.5vh;
+  color: var(--font-color);
+  font-size: 1.15rem;
+}
+
+.profile > a > .spotify-button > img{
+  position: relative;
+  width: 25px;
+  height: 25px;
+  left: 1vw;
+  bottom: 0.5vh;
+}
+
+.actual-song {
+  display: flex;
+  position: relative;
+  margin-top: 7.5vh;
+  left: 35%;
+  background: #18181B;
+  width: 35%;
+  height: 30%;
+  border-radius: 2rem 2rem 2rem 2rem;
+}
+
+.actual-song > .song-image{
+  position: relative;
+  margin-top: 1vh;
+  width: 14vw;
+  height: 90%;
+  left: 5%;
+}
+
+.actual-song > .information{
+  position: relative;
+  margin-left: 2vw;
+  color: var(--font-color);
+  text-align: start;
+  left: 5%;
+  font-family: poppins-normal;
+  align-items: flex-start;
+}
+
+.actual-song > .information > .song-artist{
+  width: 100%;
+}
+
+.actual-song > .information > .song-progress > .time{
+  display: flex;
+}
+
+.actual-song > .information > .song-progress > .total-progress{
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #555555;
+  border-radius: 2rem 2rem 2rem 2rem;
+}
+
+.actual-song > .information > .song-progress > .total-progress > .actual-progress{
+  position: relative;
+  top: 0;
+  width: 50%;
+  height: 10px;
+  background: #fff;
+  border-radius: 2rem 2rem 2rem 2rem;
+}
+
+.actual-song > .information > a{
+  text-decoration: none;
+}
+
+.actual-song > .information > a::after{
+  text-decoration: none;
+}
+
+.actual-song > .information > a > .song-link{
+  display: flex;
+  margin-top: 3vh;
+  position: relative;
+  border-radius: 2rem 2rem 2rem 2rem;
+  left: 30%;
+  height: 5vh;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  transition: all 1s;
+  border: none;
+}
+.actual-song > .information > a > .song-link:hover{
+  background: #e664e6;
+  cursor: pointer;
+}
+
+.actual-song > .information > a > .song-link > img{
+  position: relative;
+  height: 5vh;
+  width: auto;
+  left: -0.5vw;
+}
+
+.actual-song > .information > a > .song-link > h2{
+  position: relative;
+  left: -0.5vw;
+  font-size: 1rem;
+}

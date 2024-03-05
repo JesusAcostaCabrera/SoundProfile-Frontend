@@ -5,6 +5,5 @@ export default async function getUserData(accessToken) {
   });
 
   const data = await response.json();
-  console.log(data);
   return data;
 }

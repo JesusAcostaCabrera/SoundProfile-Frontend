@@ -15,6 +15,6 @@ export default async function getToken(code, clientID, redirectURL) {
     }),
   });
   const data = await response.json();
-
+  console.log(data);
   return data;
 };
